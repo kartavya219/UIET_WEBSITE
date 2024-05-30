@@ -1,0 +1,157 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.header-content {
+  display: flex; /* Make the container behave like a flexbox */
+  align-items: center; /* Align elements vertically within the container */
+  justify-content: space-between; /* Space elements horizontally */
+  padding-bottom: 20px;
+  font-size: 16px;
+   /* Increased padding for more space */
+  }
+  
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+h1{text-align: center;}
+/* Header */
+header {
+  background-color: #dae2aa; /* Light orange */
+  padding: 15px ;
+  
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+h1 {
+  flex-grow: 1;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #115775; /* Dark teal */
+}
+
+/* Container */
+.container {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff; /* White */
+}
+
+.main-section {
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #ffdd00; /* Light orange */
+}
+
+/* About Us */
+.director {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.director img {
+  margin-right: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* Gallery */
+.gallery img {
+  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #247ba0; /* Dark teal */
+  color: #fff; /* White for text */
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #dae2aa;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.a{
+  padding : 15px;
+ 
+}
