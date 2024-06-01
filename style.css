@@ -5,6 +5,10 @@ body {
   padding: 0;
 }
 
+.whatsappimg{
+  border-radius: 50%;
+}
+
 a {
   text-decoration: none;
   color: #333;
