@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            padding-top: 80px; /* Adjust this based on the header height */
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1f1f1f;
+            padding: 1rem 0;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e0e0e0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-links li a {
+            font-size: 1rem;
+            padding: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #ff9800;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 2rem 0;
+        }
+
+        .contact-us {
+            text-align: left;
+        }
+
+        .contact-us h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-info h2 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info p {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-container {
+            background-color: #1f1f1f;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form-container h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-form label {
+            font-size: 1rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.75rem;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #ff9800;
+            color: #121212;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #e68900;
+        }
+
+        /* Map Section */
+        .map {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .map h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .map-container {
+            border: 1px solid #333;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #1f1f1f;
+            padding: 1rem 0;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+
+<header id="header" style="background-color: #1c1c1c;">
+    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <div class="logo" style="flex: 1;">
+            <h1 style="margin: 0; color: #f0f0f0;">U.I.E.T.</h1>
+        </div>
+        <a href="./index.html" style="flex: 1; text-align: right; color: #e68900; text-decoration: none; display: flex; align-items: center; justify-content: flex-end;">
+            <span style="font-weight: 100; font-size: small;">(Back to Home page)</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16" style="margin-left: 5px;">
+                <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+                <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+            </svg>
+        </a>
+    </div>
+</header>
+
+<main>
+    <section class="contact-us">
+        <div class="container">
+            <div class="container-inner" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1>Contact Us</h1>
+                <div class="contact-info">
+                    <p>Contact Number: 0172-2541242</p>
+                    <p>Email: <a href="mailto:directoruiet@pu.ac.in" style="color: #ff9800;">directoruiet@pu.ac.in <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                        <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+                        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+                    </svg></a>
+                    </p>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <h2>Send Us a Message</h2>
+                <form class="contact-form" action="#" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="map">
+        <div class="container">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                <!-- Embed Google Map here -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3428.94312770243!2d76.75457447558097!3d30.74809897457686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feda45e945a31%3A0xdc967b3a7e0f1e95!2sUniversity%20Institute%20Of%20Engineering%20and%20Technology%2C%20Panjab%20University!5e0!3m2!1sen!2sin!4v1717256456227!5m2!1sen!2sin" 
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <p>&copy; 2024 U.I.E.T. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const header = document.getElementById('header');
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            header.style.top = '-80px'; // Adjust based on your header height
+        } else {
+            header.style.top = '0';
+        }
+        lastScrollTop = scrollTop;
+    });
+
+    header.addEventListener('mouseenter', function() {
+        header.style.top = '0';
+    });
+
+    header.addEventListener('mouseleave', function() {
+        if (window.pageYOffset > 0) {
+            header.style.top = '-80px';
+        }
+    });
+</script>
+
+</body>
+</html>
