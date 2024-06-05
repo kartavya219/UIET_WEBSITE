@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sevillana&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: 100vh;
+            min-height: 100vh;
+            background: #222;
+        }
+
+        .container{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .card{
+            position: absolute;
+            width: 240px;
+            height: 320px;
+            background: #333;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .card img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: 0.5s;
+            filter: grayscale(1) contrast(2);
+
+        }
+
+        .container:hover .card{
+            transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 120px), -50px);
+        }
+
+        .container:hover .card img{
+            opacity: 0.5;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .container .card:hover{
+            translate: calc(var(--i) * 20px) -50px;
+            z-index: 100;
+        }
+
+        .container .card:hover img{
+            filter: grayscale(0) contrast(1);
+            opacity: 1;
+        }
+
+        .container .card::before{
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            white-space: nowrap;
+            text-transform: uppercase;
+            font-size: 1.25em;
+            letter-spacing: 0.15em;
+            color: #fff;
+            font-weight: 500;
+            transition: 0.5s;
+            z-index: 1000;
+            opacity: 0;
+            text-align: center;
+            transform: translateY(100px);
+        }
+
+        .container .card:hover::before{
+            top: -40px;
+            opacity: 1;
+            transform: translateY(0px);
+
+        }
+
+        .container .card::after{
+            content: '';
+            position: absolute;
+            top: -100px;
+            width: 50px;
+            height: 10px;
+            background: #ff003b;
+            transition: 0.5s;
+            transform: scaleY(0);
+            transform-origin: top;
+            z-index: -1;
+        }
+
+        .container .card:hover::after{
+            transform: scaleY(50);
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="--i:-5" data-text="Star"><img src="./gallery/star.png"></div>
+        <div class="card" style="--i:-4" data-text="BPC"><img src="./gallery/bpc.png"></div>
+        <div class="card" style="--i:-3" data-text="Euphoria"><img src="./gallery/euphoria.png"></div>
+        <div class="card" style="--i:-2" data-text="Mitra"><img src="./gallery/mitra.jpeg"></div>
+        <div class="card" style="--i:-1" data-text="Jugaad"><img src="./gallery/jugadd.jpeg"></div>
+        <div class="card" style="--i:0" data-text="EDC"><img src="./gallery/edc.jpeg"></div>
+        <div class="card" style="--i:1" data-text="Debsoc"><img src="./gallery/debating.png"></div>
+        <div class="card" style="--i:2" data-text="GDSC"><img src="./gallery/gdsc.png"></div>
+        <div class="card" style="--i:3" data-text="Rotaract"><img src="./gallery/rototact.png"></div>
+        <div class="card" style="--i:4" data-text="IEEE"><img src="./gallery/ieee.jpeg"></div>
+        <div class="card" style="--i:5" data-text="Imagen"><img src="./gallery/imagen.png"></div>
+        <div class="card" style="--i:6" data-text="Osmium"><img src="./gallery/om.jpeg"></div>
+    </div>
+    
+</body>
+</html>
