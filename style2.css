@@ -6,6 +6,25 @@ body {
     padding-top: 60px;
   }
 
+  .whatsappimg{
+
+    border-radius: 50%;
+    position: fixed;
+   
+  }
+
+
+.center-txt{
+text-align: center;  
+padding: 3rem;
+}
+
+.change{
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+}
+
+
   a {
     color: inherit;
     text-decoration: none;
