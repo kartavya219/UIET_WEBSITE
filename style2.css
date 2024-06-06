@@ -5,6 +5,10 @@ body {
   color: #000;
   padding-top: 60px;
 }
+.center-txt{
+text-align: center;
+}
+
 
 .whatsapp-icon {
   position: fixed;
