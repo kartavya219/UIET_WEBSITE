@@ -27,7 +27,6 @@ body {
   opacity: 1;
 }
 
-
 a {
   color: inherit;
   text-decoration: none;
@@ -35,7 +34,7 @@ a {
 
 /* Header Styles */
 header {
-  background-color: #1f1f1f;
+  background-color: #000;
   padding: 1rem 0;
   border-bottom: 1px solid #333;
   position: fixed;
@@ -68,6 +67,8 @@ nav {
   display: flex;
   list-style: none;
   gap: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links li {
@@ -266,7 +267,7 @@ nav {
   background-color: #fff;
   display: grid;
   padding: 10px;
-  gap: 20px; /* Increased gap for better spacing */
+  gap: 20px; 
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
 }
@@ -301,9 +302,10 @@ nav {
 .news {
   margin: 10px;
   padding-top: 100px;
+  margin-bottom: 70px;
   display: grid;
   background-color: #000;
-  grid-template-columns: 35% 35% 28%; /* Adjusted to include space for the headline */
+  grid-template-columns: 35% 35% 28%; 
   grid-template-rows: auto;
   gap: 10px;
 }
@@ -350,6 +352,94 @@ nav {
 
 .news_image:hover{
   box-shadow:0 0 10px 5px #fff;
+}
+
+/* alumni */
+.alumni {
+  background-color: #fff;
+  display: grid;
+  padding: 20px;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.alumni-title {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.alumni-title h1 {
+  font-family: WF Visual Sans, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18vh;
+  color: #000;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.alumni-member {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alumni-member:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.alumni-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alumni-image img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.alumni-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.alumni-message p {
+  margin: 0 0 10px;
+  font-family: WF Visual Sans, Arial, sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+.alumni-message .alumni-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.alumni-message .alumni-batch {
+  font-size: 1rem;
+  color: #666;
+}
+
+
+footer {
+  background-color: #000;
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #fff;
 }
 
 

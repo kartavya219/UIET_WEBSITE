@@ -9,9 +9,9 @@
         /* General Styles */
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
+            font-family: WF Visual Sans, Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
             padding-top: 80px; /* Adjust this based on the header height */
         }
 
@@ -28,7 +28,7 @@
 
         /* Header Styles */
         header {
-            background-color: #1f1f1f;
+            background-color: #000;
             padding: 1rem 0;
             border-bottom: 1px solid #333;
             display: flex;
@@ -44,28 +44,7 @@
         .logo a {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #e0e0e0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-
-        .nav-links li a {
-            font-size: 1rem;
-            padding: 0.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links li a:hover {
-            color: #ff9800;
+            color: #fff;
         }
 
         /* Main Content Styles */
@@ -126,7 +105,7 @@
             border: 1px solid #333;
             border-radius: 4px;
             background-color: #2c2c2c;
-            color: #e0e0e0;
+            color: #fff;
             font-size: 1rem;
         }
 
@@ -134,15 +113,10 @@
             padding: 0.75rem;
             border: none;
             border-radius: 4px;
-            background-color: #ff9800;
-            color: #121212;
+            background-color: #146ef5;
+            color: #000;
             font-size: 1rem;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-form button:hover {
-            background-color: #e68900;
         }
 
         /* Map Section */
@@ -157,14 +131,14 @@
         }
 
         .map-container {
-            border: 1px solid #333;
+            border: 1px solid #000;
             border-radius: 4px;
             overflow: hidden;
         }
 
         /* Footer Styles */
         footer {
-            background-color: #1f1f1f;
+            background-color: #000;
             padding: 1rem 0;
             text-align: center;
             border-top: 1px solid #333;
@@ -178,12 +152,12 @@
 </head>
 <body>
 
-<header id="header" style="background-color: #1c1c1c;">
+<header id="header" style="background-color: #000;">
     <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 20px;">
         <div class="logo" style="flex: 1;">
-            <h1 style="margin: 0; color: #f0f0f0;">U.I.E.T.</h1>
+            <h1 style="margin: 0; color: #fff;">U.I.E.T.</h1>
         </div>
-        <a href="./index.html" style="flex: 1; text-align: right; color: #e68900; text-decoration: none; display: flex; align-items: center; justify-content: flex-end;">
+        <a href="./index.html" style="flex: 1; text-align: right; color: #146ef5; text-decoration: none; display: flex; align-items: center; justify-content: flex-end;">
             <span style="font-weight: 100; font-size: small;">(Back to Home page)</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16" style="margin-left: 5px;">
                 <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
@@ -200,7 +174,7 @@
                 <h1>Contact Us</h1>
                 <div class="contact-info">
                     <p>Contact Number: 0172-2541242</p>
-                    <p>Email: <a href="mailto:directoruiet@pu.ac.in" style="color: #ff9800;">directoruiet@pu.ac.in <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                    <p>Email: <a href="mailto:directoruiet@pu.ac.in" style="color: #146ef5;">directoruiet@pu.ac.in <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
                         <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
                         <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
                     </svg></a>
