@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sevillana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <style>
         *{
             margin: 0;
@@ -20,11 +23,12 @@
             justify-content: center;
             align-items: 100vh;
             min-height: 100vh;
-            background: #222;
+            background: #1f1f1f;
         }
 
         .container{
             position: relative;
+            top: 5ppx;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -33,8 +37,8 @@
 
         .container .card{
             position: absolute;
-            width: 240px;
-            height: 320px;
+            width: 100px;
+            height: 150px;
             background: #333;
             border-radius: 10px;
             cursor: pointer;
@@ -58,7 +62,7 @@
         }
 
         .container:hover .card{
-            transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 120px), -50px);
+            transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) *50px), -60px);
         }
 
         .container:hover .card img{
@@ -90,7 +94,7 @@
             z-index: 1000;
             opacity: 0;
             text-align: center;
-            transform: translateY(100px);
+            transform: translateY(20px);
         }
 
         .container .card:hover::before{
@@ -103,10 +107,8 @@
         .container .card::after{
             content: '';
             position: absolute;
-            top: -100px;
+            top: -10px;
             width: 50px;
-            height: 10px;
-            background: #ff003b;
             transition: 0.5s;
             transform: scaleY(0);
             transform-origin: top;
@@ -122,22 +124,115 @@
 
 
     </style>
+
+ 
 </head>
-<body>
-    <div class="container">
-        <div class="card" style="--i:-5" data-text="Star"><img src="./gallery/star.png"></div>
-        <div class="card" style="--i:-4" data-text="BPC"><img src="./gallery/bpc.png"></div>
-        <div class="card" style="--i:-3" data-text="Euphoria"><img src="./gallery/euphoria.png"></div>
-        <div class="card" style="--i:-2" data-text="Mitra"><img src="./gallery/mitra.jpeg"></div>
-        <div class="card" style="--i:-1" data-text="Jugaad"><img src="./gallery/jugadd.jpeg"></div>
-        <div class="card" style="--i:0" data-text="EDC"><img src="./gallery/edc.jpeg"></div>
-        <div class="card" style="--i:1" data-text="Debsoc"><img src="./gallery/debating.png"></div>
-        <div class="card" style="--i:2" data-text="GDSC"><img src="./gallery/gdsc.png"></div>
-        <div class="card" style="--i:3" data-text="Rotaract"><img src="./gallery/rototact.png"></div>
-        <div class="card" style="--i:4" data-text="IEEE"><img src="./gallery/ieee.jpeg"></div>
-        <div class="card" style="--i:5" data-text="Imagen"><img src="./gallery/imagen.png"></div>
-        <div class="card" style="--i:6" data-text="Osmium"><img src="./gallery/om.jpeg"></div>
+<body style="">
+
+    <header style="  text-align: center;">
+        <h1 class="display-1 center-txt" style="  font-family: WF Visual Sans, Arial, sans-serif;  color:  #b7d0f5;">UIET CLUBS</h1>
+    </header>
+
+    <div class="container" style=" position: relative;
+    bottom: 2rem; padding: 0%; margin: 0%; ">
+        <div class="card" onclick="starfunction()" style="--i:-5 " data-text="Star"><img  src="./gallery/star.png"></div>
+        <div class="card" onclick="bpcfunction()" style="--i:-4" data-text="BPC"><img src="./gallery/bpc.png"></div>
+        <div class="card" onclick="euphoriafunction()" style="--i:-3" data-text="Euphoria"><img src="./gallery/euphoria.png"></div>
+        <div class="card"  onclick="mitrafunction()" style="--i:-2" data-text="Mitra"><img src="./gallery/mitra.jpeg"></div>
+        <div class="card" onclick="jugaddfunction()" style="--i:-1" data-text="Jugaad"><img src="./gallery/jugadd.jpeg"></div>
+        <div class="card"  onclick="edcfunction()"  style="--i:0" data-text="EDC"><img src="./gallery/edc.jpeg"></div>
+        <div class="card" onclick="debatingfuction()" style="--i:1" data-text="Debsoc"><img src="./gallery/debating.png"></div>
+        <div class="card" onclick="gdscfunction()" style="--i:2" data-text="GDSC"><img src="./gallery/gdsc.png"></div>
+        <div class="card" onclick="rotoractfunction()" style="--i:3"  data-text="Rotaract"><img src="./gallery/rototact.png"></div>
+        <div class="card"  onclick="ieeefunction()" style="--i:4" data-text="IEEE"><img src="./gallery/ieee.jpeg"></div>
+        <div class="card" onclick="imagenfunction()" style="--i:5" data-text="Imagen"><img src="./gallery/imagen.png"></div>
+        <div class="card" onclick="omfunction()"      style="--i:6" data-text="Osmium"><img src="./gallery/om.jpeg"></div>
+
+        <div style="position: relative; top: 80%;" >
+            <h1 class="display-3  " id="name"  style="  text-decoration: underline;
+            text-decoration-color: #b7d0f5;  text-align: center; color: #fff; " >Introduction</h1>
+            <h1 id="txt" class="display-8" style="color: #fff;">Clubs - College life isn't just about textbooks and exams. It's about exploring your passions, developing new skills, and making lifelong connections. UIET offers a vibrant network of clubs and committees that cater to diverse interests, from academic pursuits and creative expression to social service and professional development. Whether you're a budding entrepreneur, a tech enthusiast, a music aficionado, or simply someone looking to give back to the community, there's a club or committee waiting to welcome you. Get ready to step outside your comfort zone, build your resume, and create lasting memories – all while contributing to a dynamic and enriching college experience.</h1></div>
     </div>
-    
+    <script>
+        function omfunction() {
+          document.getElementById("txt").innerHTML="Osmium- Craving a stage to ignite your passion for theatre? Look no further than UIET's Dramatic Club, Osmium! Inspired by the element's enduring presence, Osmium fosters a vibrant community of actors, writers, and technicians. We offer a platform to hone your craft, collaborate with like-minded individuals, and contribute to captivating productions that leave a lasting impression. Whether you dream of captivating audiences on stage or breathing life into a performance behind the scenes, Osmium welcomes you. Join us and discover a space for creativity, growth, and the transformative power of theatre.";
+          document.getElementById("name").innerHTML="OSMIUM"; 
+        }
+
+        function edcfunction() {
+          document.getElementById("txt").innerHTML="EDC Success is a mid way journey as it comes to you only when you strive for it.With this motivation we have set up Entrepreneurship Development Cell (EDC) in Chandigarh.In today's changing economic scenario college education isn't a guarantee of success. World needs a new vision which only creative and innovative entrepreneurs can provide. The entrepreneurship skills are rarely taught in college and whats more better than to start early. EDC provides you this learning opportunity.We at EDC plan to host various workshops, speaker sessions, innovative games,competitions for the aspiring entrepreneurs and support them by providing necessary resources such as seed funding, mentoring, consultancy and networking.";
+          document.getElementById("name").innerHTML="EDC"; 
+
+        }
+
+        function euphoriafunction() {
+          document.getElementById("txt").innerHTML="It is  the official music committee of UIET, Panjab University, Chandigarh.Owing to the perseverance of Shubham and Jaskirat Sir, Euphoria was formed on 6th May, 2019 making it the youngest committee in UIET.ts aim is to provide a platform for all the music enthusiasts to unite, learn and create good music.Euphoria started with the dedication of a few and has now grown into a community of many, with one common motive i.e. music.Making Sounds&Sileneces , it aims to to create a joyous moos in every event ";
+          document.getElementById("name").innerHTML="EUPHORIA"; 
+
+        }
+
+
+
+        function jugaddfunction() {
+          document.getElementById("txt").innerHTML="Jugaad is the official Robotics Club of UIET Punjab University.Here we make various robotics projects based on Arduino and various other microcontrollers and also teach some basics about robotics and about Arduino, types of motors, etc.The club is open to students with or without experience because, believe it or not, none of us had any idea of robotics when we first stepped into the club room, neither do we expect anything from you. You just need to show up and the club and its people will take care of the rest. The club's environment perpetuates the sharing of wisdom and experience amongst our members. We cater to every individual who ever wanted to design their own circuit and control their own bot. All we need from you is enthusiasm!";
+          document.getElementById("name").innerHTML="JUGAAD"; 
+
+        }
+
+
+        function ieeefunction() {
+          document.getElementById("txt").innerHTML="EEE UIET, Chandigarh Student Branch is a sub-branch under the umbrella organization of the Institute of Electrical and Electronics Engineers(IEEE), which aims to provide the latest technological details and the know-how to the up and coming engineers all around the globe.Since our branch’s inception in 2006 , we’ve been very actively working with all IEEE projects and constantly conducting various events, panel discussions, workshops, industrial trips, webinars, and conferences.Technology is best when it brings people together; hence we aim to provide the students of not just our institution, but the tech enthusiasts all around, a platform to develop their technological understanding by providing opportunities to quench their curiosity for technology.";
+          document.getElementById("name").innerHTML="EEE"; 
+        }
+
+
+
+        
+
+
+        function rotoractfunction() {
+          document.getElementById("txt").innerHTML="Roteract - Invigorating social change and empowering the community, Rotaract Club of UIET is a student-driven organization dedicated to making a positive difference. Affiliated with Rotary International, we provide a platform for UIET students to develop leadership skills, engage in service projects, and champion social causes that impact the lives of others. Join us and become a force for good, fostering positive change within our college and the wider community.";
+          document.getElementById("name").innerHTML="ROTORACT"; 
+        }
+
+
+        function gdscfunction() {
+          document.getElementById("txt").innerHTML="GDSC Google Developer Student Clubs are part of a global community of students, taken care of directly by Google.Technology has a great power to accomplish even the impossible-seeming tasks. This Club fosters the development culture among its members and aims to equip them with the power of innovative thinking and multidisciplinary tools and techniques. Google Developer Student Club, UIET aims to develop innovative solutions for various problems which persist in society and target the 17 sustainable development goals of the United Nations.We are looking forward to having you in the community and great collaborations with great innovations :)";
+          document.getElementById("name").innerHTML="GDSC"; 
+
+        }
+
+
+        function bpcfunction() {
+          document.getElementById("txt").innerHTML="The Brand Promotion Committee is a Student-centric community with one goal i.e building UIET as a brand.From organizing Orientation to fun events like Legacy, webinars, and much more! We've made a family that promotes the work culture in a fun yet formal way.We encourage new members to develop skills that assist them not only in organizing and managing events but also to work in professional environments.Many students when they get into colleges, do not get the right exposure and the knack for being in a position to organize events and being in a higher authoritative place in general.Team BPC stands with their Motto which is Think Out of the Box!  and focuses on making UIET a better place by promoting the right work culture among the students.";
+          document.getElementById("name").innerHTML="BPC"; 
+
+        }
+
+
+        function imagenfunction() {
+          document.getElementById("txt").innerHTML="IMAGEN - Imagen is the official photography club of UIET , Punjab University .We just don't do photography but , also film making graphic designing , and much more . We perform workshops about different topics related to photography , film making , photo editting , etc  where we teach and learn from each other and grow together. ßWe also perform photowalkswhere the whole imagen team goes for a walk on some place where we click photos and try caputure some of the bueaty moments of nature .";
+          document.getElementById("name").innerHTML="IMAGEN"; 
+        }
+
+        function mitrafunction() {
+          document.getElementById("txt").innerHTML= "MITRA Welcome to our college's Social Service Club – the heart of compassionate action and transformative connections! We're a vibrant community of students committed to making a difference through meaningful service projects and impactful initiatives. Join us to explore diverse volunteering opportunities, engage in hands-on projects, and participate in inspiring events that promote empathy and social responsibility. Together, let's cultivate lasting friendships, amplify our voices for positive change, and leave a legacy of compassion that enriches both our college experience and the world around us. Come be a part of something truly special – join our Social Service Club and let's make a difference together!";
+          document.getElementById("name").innerHTML="MITRA"; 
+        }
+
+
+        function debatingfuction() {
+          document.getElementById("txt").innerHTML="Debsoc UIET is a vibrant community of eloquent minds dedicated to fostering critical thinking, effective communication, and intellectual growth. As the premier debating society on campus, we provide a platform for students to engage in thought-provoking discussions, refine their oratory skills, and build lasting connections.Our Mission:At Debsoc UIET, we believe in the power of words to inspire change. Our mission is to cultivate a culture of debate, dialogue, and discourse, empowering students to express their ideas with confidence and clarity. We strive to create an inclusive space where diverse perspectives thrive, contributing to the overall academic and personal development of our members.";
+          document.getElementById("name").innerHTML="DEBSOC"; 
+        }
+
+
+        function starfunction() {
+          document.getElementById("txt").innerHTML="Meet STAR – the Student-Alumni Relations Committee, your bridge to a thriving network of alumni connections! We're the dedicated team at UIET, committed to fostering meaningful relationships and maintaining extensive databases with our esteemed alumni community. Our mission is to facilitate engagement, mentorship, and opportunities for collaboration between current students and alumni across diverse industries and professions. Join us to unlock the power of our alumni network, gain valuable insights, and forge lasting connections that transcend graduation. Together, let's embark on a journey of growth, learning, and professional development with STAR!";
+          document.getElementById("name").innerHTML="STAR"; 
+        }
+
+        </script>
+
 </body>
 </html>
